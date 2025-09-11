@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Login from "./components/login";
 
 function Home() {
   return (
@@ -19,35 +20,6 @@ function Home() {
     </div>
   );
 }
-
-function Login() {
-  return (
-    <div className="flex flex-col items-center justify-center py-10">
-      <h2 className="text-4xl font-bold mb-6 text-white drop-shadow-lg">
-        Login
-      </h2>
-      <form className="bg-white p-6 rounded-lg shadow-lg w-full max-w-lg space-y-4">
-        <input
-          type="email"
-          placeholder="Seu Email"
-          className="w-full border p-3 rounded focus:border-blue-700 outline-none"
-        />
-        <input
-          type="text"
-          placeholder="Senha"
-          className="w-full border p-3 rounded focus:border-blue-700 outline-none"
-        />
-        <button
-          type="submit"
-          className="w-full bg-blue-700 text-white py-3 rounded hover:bg-blue-800 transition"
-        >
-          Enviar
-        </button>
-      </form>
-    </div>
-  );
-}
-
 
 function Sobre() {
   return (
