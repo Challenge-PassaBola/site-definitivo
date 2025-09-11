@@ -45,28 +45,11 @@ function Contato() {
       <h2 className="text-4xl font-bold mb-6 text-white drop-shadow-lg">
         Contato
       </h2>
-      <form className="bg-white p-6 rounded-lg shadow-lg w-full max-w-lg space-y-4">
-        <input
-          type="text"
-          placeholder="Seu Nome"
-          className="w-full border p-3 rounded focus:border-blue-700 outline-none"
-        />
-        <input
-          type="email"
-          placeholder="Seu Email"
-          className="w-full border p-3 rounded focus:border-blue-700 outline-none"
-        />
-        <textarea
-          placeholder="Sua Mensagem"
-          className="w-full border p-3 rounded h-32 focus:border-blue-700 outline-none"
-        />
-        <button
-          type="submit"
-          className="w-full bg-blue-700 text-white py-3 rounded hover:bg-blue-800 transition"
-        >
-          Enviar
-        </button>
-      </form>
+      <p className="max-w-2xl text-lg drop-shadow-md">
+        Entre em contato conosco via email:</p>
+      <p className="max-w-2xl text-lg drop-shadow-md">
+        pixelforge603@gmail.com
+      </p>
     </div>
   );
 }
