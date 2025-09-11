@@ -20,6 +20,35 @@ function Home() {
   );
 }
 
+function Login() {
+  return (
+    <div className="flex flex-col items-center justify-center py-10">
+      <h2 className="text-4xl font-bold mb-6 text-white drop-shadow-lg">
+        Login
+      </h2>
+      <form className="bg-white p-6 rounded-lg shadow-lg w-full max-w-lg space-y-4">
+        <input
+          type="email"
+          placeholder="Seu Email"
+          className="w-full border p-3 rounded focus:border-blue-700 outline-none"
+        />
+        <input
+          type="text"
+          placeholder="Senha"
+          className="w-full border p-3 rounded focus:border-blue-700 outline-none"
+        />
+        <button
+          type="submit"
+          className="w-full bg-blue-700 text-white py-3 rounded hover:bg-blue-800 transition"
+        >
+          Enviar
+        </button>
+      </form>
+    </div>
+  );
+}
+
+
 function Sobre() {
   return (
     <div className="text-center text-white flex flex-col items-center">
@@ -95,6 +124,7 @@ export default function App() {
             <Link to="/" className="hover:text-blue-400 transition">Início</Link>
             <Link to="/sobre" className="hover:text-blue-400 transition">Sobre</Link>
             <Link to="/contato" className="hover:text-blue-400 transition">Contato</Link>
+            <Link to="/login" className="hover:text-blue-400 transition">Login</Link>
           </nav>
         </header>
 
@@ -103,6 +133,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/sobre" element={<Sobre />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/contato" element={<Contato />} />
             <Route path="/placeholder" element={<Placeholder />} />
           </Routes>
