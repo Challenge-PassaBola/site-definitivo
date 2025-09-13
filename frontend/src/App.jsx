@@ -1,18 +1,20 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Login from "./components/login";
-
+import "./App.css";
+import Footer from "../src/components/footer";
+import Header from "../src/components/header";
 function Home() {
   return (
     <div className="text-white text-center flex flex-col items-center justify-center min-h-[80vh]">
       <h2 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">
-        Bem-vindo ao <span className="bg-blue-700 rounded px-2">Passa a Bola</span>
+        Bem-vindo ao <span className="bg-purple-900 rounded px-5">Passa a Bola</span>
       </h2>
       <img
-        src="/assets/passabolabanner.png"
+        src="/banner.png"
         alt="Banner"
         className="rounded-2xl shadow-lg mb-6 w-full max-w-3xl"
       />
-      <p className="max-w-2xl text-lg drop-shadow-md">
+      <p className="max-w-2xl text-lg text-white drop-shadow-md bg-black/60 px-3 py-2 rounded">
         O Passa a Bola é um espaço para compartilhar notícias, histórias e curiosidades
         sobre o mundo do futebol. Aqui você encontra conteúdo dinâmico, acessível e
         feito para os verdadeiros apaixonados pelo esporte.
@@ -23,7 +25,7 @@ function Home() {
 
 function Sobre() {
   return (
-    <div className="text-center text-white flex flex-col items-center">
+    <div className="text-center text-black flex flex-col items-center">
       <h2 className="text-4xl font-bold mb-6 drop-shadow-lg">Sobre Nós</h2>
       <p className="max-w-2xl text-lg drop-shadow-md">
         Somos uma equipe dedicada a trazer informação e entretenimento sobre futebol.
@@ -70,19 +72,7 @@ export default function App() {
         <div className="absolute inset-0 bg-black/10 -z-10"></div>
 
         {/* Header */}
-        <header className="bg-[#192868cc] p-4 flex items-center justify-between shadow-md">
-          <div className="flex items-center gap-2 text-white drop-shadow-md">
-            <img src="/assets/logo.png" alt="Logo" className="h-12 w-12 rounded-full" />
-            <h1 className="text-2xl font-bold">Passa a Bola</h1>
-          </div>
-          <nav className="flex gap-6 text-white">
-            <Link to="/" className="hover:text-blue-400 transition">Início</Link>
-            <Link to="/sobre" className="hover:text-blue-400 transition">Sobre</Link>
-            <Link to="/contato" className="hover:text-blue-400 transition">Contato</Link>
-            <Link to="/login" className="hover:text-blue-400 transition">Login</Link>
-          </nav>
-        </header>
-
+      <Header />
         {/* Conteúdo */}
         <main className="p-6">
           <Routes>
@@ -93,12 +83,9 @@ export default function App() {
             <Route path="/placeholder" element={<Placeholder />} />
           </Routes>
         </main>
-
-        {/* Footer */}
-        <footer className="bg-[#192868cc] text-white text-right p-4 shadow-inner">
-          <p className="drop-shadow-md">© 2025 Passa a Bola - Todos os direitos reservados</p>
-        </footer>
       </div>
+        {/* Footer */}
+        <Footer />
     </Router>
   );
 }
