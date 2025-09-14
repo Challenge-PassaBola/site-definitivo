@@ -4,20 +4,33 @@ function Login() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [mensagem, setMensagem] = useState("");
+  const [erro, setErro] = useState(false); // para diferenciar sucesso/erro
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       const res = await fetch("http://localhost:3001/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, senha }),
-    });
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, senha }),
+      });
 
       const resultado = await res.json();
-      setMensagem(resultado.sucesso || resultado.erro);
+
+      if (res.ok && resultado.sucesso) {
+        // salva token no localStorage (se o backend enviar)
+        if (resultado.token) {
+          localStorage.setItem("token", resultado.token);
+        }
+        setErro(false);
+        setMensagem(resultado.sucesso);
+      } else {
+        setErro(true);
+        setMensagem(resultado.erro || "Erro no login.");
+      }
     } catch (err) {
+      setErro(true);
       setMensagem("Erro ao conectar com o servidor.");
     }
   };
@@ -25,7 +38,6 @@ function Login() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-800 px-4">
       <div className="bg-gray-800 shadow-xl rounded-2xl p-8 max-w-md w-full border border-purple-700">
-        {/* Título */}
         <h2 className="text-3xl font-bold text-center text-white mb-2">
           Entrar na sua conta
         </h2>
@@ -33,7 +45,6 @@ function Login() {
           Acesse sua conta para acompanhar o futebol feminino
         </p>
 
-        {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-4" noValidate>
           <input
             type="email"
@@ -64,12 +75,16 @@ function Login() {
           </button>
         </form>
 
-        {/* Mensagem */}
         {mensagem && (
-          <p className="mt-4 text-center text-purple-400">{mensagem}</p>
+          <p
+            className={`mt-4 text-center font-medium ${
+              erro ? "text-red-400" : "text-green-400"
+            }`}
+          >
+            {mensagem}
+          </p>
         )}
 
-        {/* Cadastro */}
         <p className="mt-6 text-center text-gray-400">
           Não tem uma conta?{" "}
           <a href="#" className="text-purple-400 font-semibold hover:underline">
