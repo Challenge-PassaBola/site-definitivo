@@ -9,11 +9,11 @@ function Login() {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://localhost:3000/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, senha }),
-      });
+      const res = await fetch("http://localhost:3001/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, senha }),
+    });
 
       const resultado = await res.json();
       setMensagem(resultado.sucesso || resultado.erro);

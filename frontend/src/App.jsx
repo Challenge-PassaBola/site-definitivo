@@ -4,17 +4,12 @@ import "./App.css";
 import Footer from "../src/components/footer";
 import Header from "../src/components/header";
 import Sobre from "./components/Sobre";
-import Home from "./components/Home"
+import Home from "./components/Home";
 import Noticias from "./components/Noticias";
 import Podcast from "./components/Podcast";
 import Peneiras from "./components/Peneiras";
-import Contato from "./components/Contato"
-
-{/*Sobre */}
-<Sobre />
-{/*Contato */}
-<Contato />
-
+import Contato from "./components/Contato";
+import Loja from "./components/Loja";
 function Placeholder() {
   return (
     <div className="text-center text-white py-20">
@@ -33,6 +28,7 @@ export default function App() {
         <main className="">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/loja" element={<Loja />} />
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/login" element={<Login />} />
             <Route path="/contato" element={<Contato />} />

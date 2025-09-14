@@ -16,7 +16,7 @@ export default function Home() {
           className="rounded-2xl shadow-lg mb-6 w-full max-w-3xl"
         />
 
-        <p className="max-w-2xl text-lg text-white drop-shadow-md bg-black/60 px-3 py-2 rounded">
+        <p className="max-w-2xl text-lg text-purple-200 px-3 py-2 rounded">
           O Passa a Bola é um espaço para compartilhar notícias, histórias e curiosidades
           sobre o mundo do futebol. Aqui você encontra conteúdo dinâmico, acessível e
           feito para os verdadeiros apaixonados pelo esporte.

@@ -14,6 +14,9 @@ function Header() {
     <Link to="/" className="px-4 py-2 rounded-md border border-purple-700 text-purple-500 hover:bg-purple-700 hover:text-white transition">
       Início
     </Link>
+    <Link to="/loja" className="px-4 py-2 rounded-md border border-purple-700 text-purple-500 hover:bg-purple-700 hover:text-white transition">
+      Lojas
+    </Link>
     <Link to="/sobre" className="px-4 py-2 rounded-md border border-purple-700 text-purple-500 hover:bg-purple-700 hover:text-white transition">
       Sobre
     </Link>
