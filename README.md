@@ -16,19 +16,6 @@ Aqui você encontra o código-fonte do nosso site oficial, que reúne **notícia
 
 ---
 
-## 📸 Screenshots
-
-### 🏠 Página Inicial
-![Home](./docs/home.png)
-
-### 🛒 Loja Passa a Bola
-![Loja](./docs/loja.png)
-
-### 🔐 Login
-![Login](./docs/login.png)
-
----
-
 ## 📂 Estrutura do Projeto
 
 ```bash
@@ -91,17 +78,6 @@ node server.js
 - Walter Henrique Pereira de Toledo – RM (562476)  
 
 ---
-
-## 🤝 Como Contribuir
-
-1. Faça um fork do projeto  
-2. Crie uma branch com a sua feature (`git checkout -b minha-feature`)  
-3. Commit suas alterações (`git commit -m 'Adicionando nova feature'`)  
-4. Faça um push para a branch (`git push origin minha-feature`)  
-5. Abra um Pull Request  
-
----
-
 ## 📜 Licença
 
 Este projeto é de uso **educacional e não comercial**.  
