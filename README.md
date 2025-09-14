@@ -4,6 +4,8 @@ Bem-vindo ao repositório do **Passa a Bola**, um projeto dedicado a promover e 
 Aqui você encontra o código-fonte do nosso site oficial, que reúne **notícias, podcasts, peneiras, loja online e muito mais**.  
 
 ---
+## Link do deploy no Vercel
+-[Clique Aqui](site-prototipo-passa-bola.vercel.app)
 
 ## 🚀 Tecnologias Utilizadas
 
