@@ -70,6 +70,9 @@ app.get("/api/noticias", async (req, res) => {
 app.post("/contato", (req, res) => {
   const { nome, email, mensagem } = req.body;
 
+ if (!email || !email.includes("@")) {
+  return res.status(400).json({ erro: "E-mail inválido." });
+}
   if (!nome || !email || !mensagem) {
     return res.status(400).json({ erro: "Todos os campos são obrigatórios." });
   }
