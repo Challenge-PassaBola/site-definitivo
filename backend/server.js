@@ -1,19 +1,19 @@
+require("dotenv").config(); // carrega o .env logo no começo
+
 const express = require("express");
 const cors = require("cors");
+const fetch = require("node-fetch");
 
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
 app.use(cors());
 
-// ===============================
-// Usuários "cadastrados"
-// ===============================
+// Usuários de exemplo (login)
 const usuarios = [
-  { email: "teste@email.com", senha: "1234" },
-  { email: "joao@email.com", senha: "abcd" },
-  { email: "maria@email.com", senha: "senha" },
+  { email: "teste@teste.com", senha: "1234" },
+  { email: "arthur@email.com", senha: "senha123" },
 ];
 
 // ===============================
@@ -43,27 +43,25 @@ app.post("/login", (req, res) => {
 });
 
 // ===============================
-// API de Notícias
+// API de Notícias (com NewsAPI)
 // ===============================
-const noticias = [
-  { id: 1, titulo: "Seleção feminina vence amistoso", conteudo: "O Brasil venceu por 2x0 em amistoso internacional." },
-  { id: 2, titulo: "Campeonato nacional começa amanhã", conteudo: "Times se preparam para a estreia." },
-];
+app.get("/api/noticias", async (req, res) => {
+  try {
+    const resposta = await fetch(
+      `https://newsapi.org/v2/everything?q=futebol%20feminino&language=pt&sortBy=publishedAt&apiKey=${process.env.NEWS_API_KEY}`
+    );
 
-app.get("/noticias", (req, res) => {
-  res.json(noticias);
-});
+    const data = await resposta.json();
 
-// ===============================
-// API de Loja
-// ===============================
-const produtos = [
-  { id: 1, nome: "Camisa Oficial", preco: 120 },
-  { id: 2, nome: "Boné Feminino", preco: 60 },
-];
+    if (!data.articles) {
+      return res.status(500).json({ erro: "Não foi possível carregar notícias." });
+    }
 
-app.get("/loja/produtos", (req, res) => {
-  res.json(produtos);
+    res.json(data);
+  } catch (error) {
+    console.error("Erro ao buscar notícias:", error);
+    res.status(500).json({ erro: "Erro ao buscar notícias." });
+  }
 });
 
 // ===============================
@@ -86,5 +84,5 @@ app.post("/contato", (req, res) => {
 // Subir servidor
 // ===============================
 app.listen(PORT, () => {
-  console.log(`Servidor rodando em http://localhost:${PORT}`);
+  console.log(`🚀 Servidor rodando em http://localhost:${PORT}`);
 });
