@@ -5,7 +5,7 @@ Aqui você encontra o código-fonte do nosso site oficial, que reúne **notícia
 
 ---
 ## Link do deploy no Vercel
--[Clique Aqui](site-prototipo-passa-bola.vercel.app)
+- site-prototipo-passa-bola.vercel.app
 
 ## 🚀 Tecnologias Utilizadas
 
