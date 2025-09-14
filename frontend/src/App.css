@@ -13,8 +13,3 @@
 @utility font-poppins {
   font-family: var(--font-poppins);
 }
-
-body {
-  @apply bg-[url('/campofoto.png')] bg-cover bg-center bg-no-repeat;
-}
-
