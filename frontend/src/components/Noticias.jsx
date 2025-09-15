@@ -20,7 +20,7 @@ export default function Noticias() {
     fetchNoticias();
   }, []);
 
-  // Simples sistema de filtro (aqui você pode customizar por palavras-chave)
+  //sistema de filtro
   const noticiasFiltradas =
     filtro === "todas"
       ? noticias
@@ -34,7 +34,7 @@ export default function Noticias() {
   const todas = noticiasFiltradas.slice(2);
 
   return (
-    <div className="max-w-6xl mx-auto p-6">
+    <div className="max-w mx-auto p-6 bg-gray-900">
       <h1 className="text-3xl font-bold text-white text-center mb-2">
         Notícias do Futebol Feminino
       </h1>
