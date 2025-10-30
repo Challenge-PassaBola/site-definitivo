@@ -36,7 +36,7 @@ export default function Footer() {
             <h3 className="font-semibold text-white mb-4">Links Rápidos</h3>
             <ul className="space-y-2">
               <li><Link to="/Noticias" className="text-gray-400 hover:text-purple-400 transition-colors">Notícias</Link></li>
-              <li><Link to="#" className="text-gray-400 hover:text-purple-400 transition-colors">Jogos</Link></li>
+              <li><Link to="/Estatisticas" className="text-gray-400 hover:text-purple-400 transition-colors">Estatísticas</Link></li>
               <li><Link to="/Peneiras" className="text-gray-400 hover:text-purple-400 transition-colors">Peneiras</Link></li>
               <li><Link to="/Podcast" className="text-gray-400 hover:text-purple-400 transition-colors">Podcast</Link></li>
             </ul>
