@@ -11,6 +11,7 @@ import Contato from "./components/Contato";
 import Noticias from "./components/Noticias";
 import Podcast from "./components/Podcast";
 import Peneiras from "./components/Peneiras";
+import Estatisticas from "./components/Estatisticas";
 
 function Placeholder() {
   return (
@@ -38,6 +39,7 @@ export default function App() {
           <Route path="/noticias" element={<Noticias />} />
           <Route path="/podcast" element={<Podcast />} />
           <Route path="/peneiras" element={<Peneiras />} />
+          <Route path="/estatisticas" element={<Estatisticas />} />
           <Route path="/placeholder" element={<Placeholder />} />
         </Routes>
       </main>
