@@ -5,7 +5,7 @@ Aqui você encontra o código-fonte do nosso site oficial, que reúne **notícia
 
 ---
 ## DEPLOY DO PROJETO
-- [CLIQUE AQUI](site-definitivo-er4o.vercel.app)
+- [CLIQUE AQUI](https://site-definitivo-er4o.vercel.app/)
 ## 🚀 Tecnologias Utilizadas
 
 - [React](https://reactjs.org/) + [Vite](https://vitejs.dev/)
