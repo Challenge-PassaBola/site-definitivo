@@ -1,17 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 
-import Header from "./components/header";
-import Footer from "./components/Footer";
-import Home from "./components/Home";
-import Loja from "./components/Loja";
-import Sobre from "./components/Sobre";
-import Login from "./components/Login";
-import Contato from "./components/Contato";
-import Noticias from "./components/Noticias";
-import Podcast from "./components/Podcast";
-import Peneiras from "./components/Peneiras";
-import Estatisticas from "./components/Estatisticas";
+import Header from "./components/header.jsx";
+import Footer from "./components/footer.jsx";
+import Home from "./components/Home.jsx";
+import Loja from "./components/Loja.jsx";
+import Sobre from "./components/Sobre.jsx";
+import Login from "./components/login.jsx";
+import Contato from "./components/Contato.jsx";
+import Noticias from "./components/Noticias.jsx";
+import Podcast from "./components/Podcast.jsx";
+import Peneiras from "./components/Peneiras.jsx";
+import Estatisticas from "./components/Estatisticas.jsx";
 
 function Placeholder() {
   return (
