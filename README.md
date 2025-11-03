@@ -4,6 +4,8 @@ Bem-vindo ao repositório do **Passa a Bola**, um projeto dedicado a promover e 
 Aqui você encontra o código-fonte do nosso site oficial, que reúne **notícias, podcasts, peneiras, loja online e muito mais**.  
 
 ---
+## DEPLOY DO PROJETO
+- [CLIQUE AQUI](site-definitivo-er4o.vercel.app)
 ## 🚀 Tecnologias Utilizadas
 
 - [React](https://reactjs.org/) + [Vite](https://vitejs.dev/)
